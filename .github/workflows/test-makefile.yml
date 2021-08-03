@@ -1,0 +1,33 @@
+
+name: Test Makefile
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    name: Pull images, pack benchmark, test-submission
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: ['ubuntu-latest']
+        proc: ['cpu']
+    env:
+      CONTAINER: drivendataorg/deid2-competition
+      SHA_TAG: ${{ matrix.proc }}-${{ github.sha }}
+      LATEST_TAG: ${{ matrix.proc }}-latest
+      GITHUB_ACTIONS_NO_TTY: true
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Test zipping benchmark
+        run: |
+          make pack-benchmark
+
+      - name: Pull latest image and run submission in container
+        run: |
+          make pull
+          make test-submission

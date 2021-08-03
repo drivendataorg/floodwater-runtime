@@ -1,0 +1,67 @@
+# Basics
+*.py[cod]
+*.pyc
+__pycache__
+
+# OSX
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Logs
+logs
+*.log
+pip-log.txt
+npm-debug.log*
+
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+htmlcov/
+coverage.xml
+
+# Vim
+*~
+*.swp
+*.swo
+
+# SublimeText
+# cache files for sublime text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+
+# workspace files are user-specific
+*.sublime-workspace
+
+# Docker
+.cache/
+
+# .docker folders
+*.docker/
+
+# Ignore notebook temp files
+**/.ipynb_checkpoints/
+
+# local env files
+.env*
+.env.local
+.env.*.local
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+
+# package stuff
+src.egg-info/
+pip-wheel-metadata/
+*.egg-info/
+
+# Submissions
+submission/

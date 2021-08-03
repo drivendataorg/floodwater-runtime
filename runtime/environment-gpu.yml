@@ -1,0 +1,68 @@
+name: condaenv
+channels:
+ - conda-forge
+ - fastai
+dependencies:
+###############################
+# planetary computer packages #
+###############################
+ - python=3.8*
+ - pangeo-notebook=2021.06.05
+ - pip=20
+ - bottleneck
+ - eofs
+ - esmpy
+ - fsspec
+ - geocube
+ - gsw
+ - lz4
+ - metpy
+ - numba>=0.53.1
+ - numcodecs
+ - numpy
+ - pandas
+ - parcels
+ - pydap
+ - pyepsg
+ - pygeos
+ - rasterio
+ - rechunker
+ - sat-search
+ - sat-stac
+ - satpy
+ - scikit-image
+ - scikit-learn
+ - scipy
+ - shapely
+ - stac-vrt
+ - tiledb-py
+ - xarray-spatial>=0.2.4
+ - xarray>=0.18.0
+ - xarrayutils
+ - zarr
+#########################
+# deep learning         #
+#########################
+ - fastai
+ - pytorch
+ - torchvision
+ - pytorch-lightning
+ - tensorflow
+#########################
+# competition specific  #
+#########################
+ - loguru
+ - pillow
+ - pytest
+ - tqdm
+ - typer
+ - xgboost
+#########################
+# install with pip      #
+#########################
+ - pip:
+   - pystac==1.0.0rc3
+   - pystac-client>=0.2.0b2
+   - planetary-computer==0.3.0rc3
+   - stackstac
+   - tifffile

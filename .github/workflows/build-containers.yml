@@ -1,0 +1,47 @@
+
+name: Build and publish container
+
+on:
+  push:
+    branches: [main]
+    paths: ['runtime/**', '.github/workflows/build-containers.yml']
+  pull_request:
+    paths: ['runtime/**', '.github/workflows/build-containers.yml']
+
+jobs:
+  build:
+    name: Build, Test, Publish container
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: ['ubuntu-latest']
+        proc: ['cpu', 'gpu']
+    env:
+      CONTAINER: drivendata/floodwater-competition
+      SHA_TAG: ${{ matrix.proc }}-${{ github.sha }}
+      LATEST_TAG: ${{ matrix.proc }}-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build ${{ matrix.proc }} container
+        run: |
+          docker build runtime --build-arg CPU_OR_GPU=${{ matrix.proc }} --tag $CONTAINER:$SHA_TAG
+          docker build runtime --build-arg CPU_OR_GPU=${{ matrix.proc }} --tag $CONTAINER:$LATEST_TAG
+
+      - name: Tests container packages
+        run: |
+          docker run $CONTAINER:$SHA_TAG /bin/bash -c "conda run --no-capture-output -n condaenv pytest tests/test_packages.py"
+
+      - name: Login to DockerHub
+        if: github.ref == 'refs/heads/main'
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Publish container if main branch
+        if: github.ref == 'refs/heads/main'
+        run: |
+          docker push $CONTAINER:$SHA_TAG
+          docker push $CONTAINER:$LATEST_TAG
