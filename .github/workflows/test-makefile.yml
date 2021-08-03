@@ -24,6 +24,7 @@ jobs:
 
       - name: Create sonme fake data
         run: |
+          pip install -U typer numpy tifffile
           python runtime/scripts/generate_fake_inputs.py runtime/data/test_features
 
       - name: Test zipping benchmark
