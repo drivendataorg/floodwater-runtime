@@ -24,7 +24,7 @@ jobs:
 
       - name: Create sonme fake data
         run: |
-          python runtime/scripts/generate_fake_inputs.py runtime/test_features
+          python runtime/scripts/generate_fake_inputs.py runtime/data/test_features
 
       - name: Test zipping benchmark
         run: |
