@@ -6,11 +6,7 @@ Welcome to the runtime repository for the [STAC Overflow: Map Floodwater from Ra
 
 This repository has three primary uses for competitors:
 
-- **Useful examples for developing your solutions**: You can find here some helpful materials as you build and test your solution:
-
-    * A properly formatted [sample submission](https://github.com/drivendataorg/floodwater-runtime/tree/main/runtime/data/submission_format);
-    * A [baseline solution](https://github.com/drivendataorg/floodwater-runtime/tree/master/benchmark) `main.py` which does not do very much but will run in the runtime environment and outputs a proper submission;
-    * An implementation of the [scoring metric](https://github.com/drivendataorg/floodwater-runtime/blob/master/runtime/scripts/metric.py) for local testing
+- **Example for developing your solutions**: You can find here a [baseline solution](https://github.com/drivendataorg/floodwater-runtime/tree/master/benchmark) `main.py` which does not do very much but will run in the runtime environment and outputs a proper submission. You can use this as a guide to bring in your model and generate a submission. 
 
 - **Testing your code submission**: It lets you test your `submission.zip` file with a locally running version of the container so you don't have to wait for it to process on the competition site to find programming errors.
 
