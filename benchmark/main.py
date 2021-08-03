@@ -48,6 +48,9 @@ def main():
     """
     image_ids = get_expected_image_ids()
     logger.info(f"found {len(image_ids)} expected image ids; generating predictions for each ...")
+    if not image_ids:
+        typer.echo("No input images found!")
+        raise typer.Exit(code=1)
     for image_id in tqdm(image_ids, miniters=25):
         # figure out where this prediction data should go
         output_path = SUBMISSION_DIRECTORY / f"{image_id}.tif"

@@ -1,9 +1,8 @@
-
 name: Test Makefile
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
   pull_request:
 
 jobs:
@@ -12,8 +11,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: ['ubuntu-latest']
-        proc: ['cpu']
+        os: [ 'ubuntu-latest' ]
+        proc: [ 'cpu' ]
     env:
       CONTAINER: drivendataorg/deid2-competition
       SHA_TAG: ${{ matrix.proc }}-${{ github.sha }}
@@ -22,6 +21,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+
+      - name: Create sonme fake data
+        run: |
+          python runtime/scripts/generate_fake_inputs.py runtime/test_features
 
       - name: Test zipping benchmark
         run: |
