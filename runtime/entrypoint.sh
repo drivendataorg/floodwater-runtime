@@ -1,10 +1,8 @@
 #!/bin/bash
-
+set -euxo pipefail
 exit_code=0
 
 {
-    set -euxo pipefail
-
     cd /codeexecution
 
     echo "Unpacking submission..."
