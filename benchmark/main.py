@@ -1,5 +1,5 @@
+import sys
 from pathlib import Path
-from typing import List
 
 from loguru import logger
 import numpy as np
@@ -51,7 +51,7 @@ def main():
         typer.echo("No input images found!")
         raise typer.Exit(code=1)
     logger.info(f"found {len(chip_ids)} expected image ids; generating predictions for each ...")
-    for chip_id in tqdm(chip_ids, miniters=25):
+    for chip_id in tqdm(chip_ids, miniters=25, file=sys.stdout, leave=True):
         # figure out where this prediction data should go
         output_path = SUBMISSION_DIRECTORY / f"{chip_id}.tif"
         # make our predictions! (you should edit `make_predictions` to do something useful)
