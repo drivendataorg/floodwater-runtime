@@ -6,8 +6,8 @@ Welcome to the runtime repository for the [STAC Overflow: Map Floodwater from Ra
 
 <div style="background-color: lightgoldenrodyellow">
 
-**Note:** This runtime is very closely based on on Microsoft's [Planetary Computer](https://github.com/microsoft/planetary-computer-containers) containers.
-The [Planetary Computer Hub](https://planetarycomputer.microsoft.com/docs/overview/environment) provides a convenient way to compute on data from the Planetary Computer. If you're interested in using the Planetary Computer Hub to develop your model, you can request access here. Make sure to include "DrivenData" in your area of study on the account request form.
+**Note:** This runtime is designed to be compatible with Microsoft's [Planetary Computer](https://github.com/microsoft/planetary-computer-containers) containers.
+The [Planetary Computer Hub](https://planetarycomputer.microsoft.com/docs/overview/environment) provides a convenient way to compute on data from the Planetary Computer. In this competition, you can train your model in the Planetary Computer Hub and test it using this repo. To request beta access to the Planetary Computer Hub, fill out [this form](https://planetarycomputer.microsoft.com/account/request) and include "DrivenData" in your area of study.
 
 </div>
 
