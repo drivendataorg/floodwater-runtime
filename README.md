@@ -56,6 +56,17 @@ To test out the full execution pipeline, run the following commands in order in 
 Download the [training images](https://www.drivendata.org/competitions/81/detect-flood-water/data/) from the competition and put all the `.tif` files from `training_features` into `runtime/data/test_features` so that you can test locally by pretending your training data is the actual test data expected by the execution environment but which you don't have locally.
 
 ```bash
+ls runtime/data/test_features/ | head -n 5
+awc00_vh.tif
+awc00_vv.tif
+awc01_vh.tif
+awc01_vv.tif
+awc02_vh.tif
+```
+
+Now we are ready to run the benchmark code:
+
+```bash
 make pull
 make pack-benchmark
 make test-submission

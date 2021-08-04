@@ -1,4 +1,4 @@
-.PHONY: build debug-container export-requirements pack-benchmark pull resolve-requirements test-container test-submission unpin-requirements
+.PHONY: build pack-benchmark pull test-submission
 
 # ================================================================================================
 # Settings
