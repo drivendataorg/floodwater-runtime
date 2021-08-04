@@ -34,7 +34,7 @@ def make_predictions(chip_id: str):
 
 def get_expected_chip_ids():
     """
-    Use the submission format directory to see which images are expected
+    Use the input directory to see which images are expected in the submission
     """
     paths = INPUT_IMAGES_DIRECTORY.glob("*.tif")
     # images are named something like abc12.tif, we only want the abc12 part
