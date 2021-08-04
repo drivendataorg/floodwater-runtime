@@ -24,7 +24,7 @@ exit_code=0
 
     echo "Compressing files in a gzipped tar archive for submission"
     cd ./submission \
-      && tar czf ./submisson.tar.gz ./*.tif \
+      && tar czf ./submisson.tar.gz *.tif \
       && rm ./*.tif \
       && cd ..
 
