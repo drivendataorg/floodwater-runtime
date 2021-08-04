@@ -1,8 +1,15 @@
 # STAC Overflow: Map Floodwater from Radar Imagery
 
-![Python 3.8](https://img.shields.io/badge/Python-3.8-blue) [![GPU Docker Image](https://img.shields.io/badge/Docker%20image-gpu--latest-green)](https://hub.docker.com/r/drivendata/floodwater-competition/tags?page=1&name=gpu-latest) [![CPU Docker Image](https://img.shields.io/badge/Docker%20image-cpu--latest-lightgrey)](https://hub.docker.com/r/drivendata/floodwater-competition/tags?page=1&name=cpu-latest) 
+![Python 3.8](https://img.shields.io/badge/Python-3.8-blue) [![GPU Docker Image](https://img.shields.io/badge/Docker%20image-gpu--latest-green)](https://hub.docker.com/r/drivendata/floodwater-competition/tags?page=1&name=gpu-latest) [![CPU Docker Image](https://img.shields.io/badge/Docker%20image-cpu--latest-green)](https://hub.docker.com/r/drivendata/floodwater-competition/tags?page=1&name=cpu-latest) 
 
 Welcome to the runtime repository for the [STAC Overflow: Map Floodwater from Radar Imagery Challenge](https://www.drivendata.org/competitions/81/detect-flood-water/). This repository contains the definition of the environment where your code submissions will run. It specifies both the operating system and the software packages that will be available to your solution.
+
+<div style="background-color: lightgoldenrodyellow">
+
+**Note:** This runtime is very closely based on on Microsoft's [Planetary Computer](https://github.com/microsoft/planetary-computer-containers) containers.
+The [Planetary Computer Hub](https://planetarycomputer.microsoft.com/docs/overview/environment) provides a convenient way to compute on data from the Planetary Computer. If you're interested in using the Planetary Computer Hub to develop your model, you can request access here. Make sure to include "DrivenData" in your area of study on the account request form.
+
+</div>
 
 This repository has three primary uses for competitors:
 
