@@ -22,9 +22,9 @@ def main(
     floods = [get_flood_id() for _ in range(n_floods)]
     for flood in floods:
         for i in range(n_per_flood):
-            image_id = f"{flood}{i:02d}"
+            chip_id = f"{flood}{i:02d}"
             for polarity in "vh":
-                filename = f"{image_id}_v{polarity}.tif"
+                filename = f"{chip_id}_v{polarity}.tif"
                 output_path = output_dir / filename
                 arr = np.random.random(size=(height, width)).round().astype(np.uint8)
                 na_mask = np.random.random(size=(height, width)) > (1 - percent_missing)
