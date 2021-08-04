@@ -24,12 +24,12 @@ exit_code=0
 
     echo "Compressing files in a gzipped tar archive for submission"
     cd ./submission \
-      && tar czf ./submisson.tar.gz *.tif \
+      && tar czf ./submission.tar.gz *.tif \
       && rm ./*.tif \
       && cd ..
 
     echo "... finished"
-    du -h submission/submisson.tar.gz
+    du -h submission/submission.tar.gz
 
     echo "================ END ================"
 } |& tee "/codeexecution/submission/log.txt"
