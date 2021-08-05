@@ -1,3 +1,6 @@
 git
 vim
 tree
+ffmpeg
+libsm6
+libxext6
