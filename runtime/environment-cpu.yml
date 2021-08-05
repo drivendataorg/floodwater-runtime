@@ -47,6 +47,8 @@ dependencies:
  - pytorch-cpu
  - torchvision-cpu
  - pytorch-lightning
+ - segmentation-models-pytorch
+ - albumentations
  - tensorflow
 #########################
 # competition specific  #
