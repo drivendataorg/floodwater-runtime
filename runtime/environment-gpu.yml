@@ -48,6 +48,7 @@ dependencies:
  - torchvision
  - pytorch-lightning
  - segmentation-models-pytorch
+ - timm
  - albumentations
  - tensorflow
 #########################
