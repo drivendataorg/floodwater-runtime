@@ -50,6 +50,7 @@ dependencies:
  - segmentation-models-pytorch
  - albumentations
  - tensorflow
+ - ttach
 #########################
 # competition specific  #
 #########################
