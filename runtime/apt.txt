@@ -2,5 +2,6 @@ git
 vim
 tree
 ffmpeg
+libfreetype-dev
 libsm6
 libxext6
