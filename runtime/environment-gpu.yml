@@ -47,7 +47,7 @@ dependencies:
  - fastai
  - pytorch::pytorch
  - pytorch::torchvision
- - pytorch::pytorch-lightning
+ - pytorch-lightning
  - nvidia::cudatoolkit=11.1
  - segmentation-models-pytorch
  - timm
