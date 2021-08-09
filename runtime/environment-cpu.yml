@@ -50,6 +50,7 @@ dependencies:
  - cpuonly
  - pytorch-lightning
  - segmentation-models-pytorch
+ - timm
  - albumentations
  - tensorflow
 #########################
