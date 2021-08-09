@@ -45,8 +45,8 @@ dependencies:
 # deep learning         #
 #########################
  - fastai
- - pytorch::pytorch
- - pytorch::torchvision
+ - pytorch::pytorch=1.7.1
+ - pytorch::torchvision=0.8.2
  - pytorch-lightning
  - nvidia::cudatoolkit=11.0
  - segmentation-models-pytorch
