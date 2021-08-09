@@ -50,7 +50,6 @@ dependencies:
  - segmentation-models-pytorch
  - albumentations
  - tensorflow
- - ttach
 #########################
 # competition specific  #
 #########################
@@ -69,3 +68,4 @@ dependencies:
    - planetary-computer==0.3.0rc3
    - stackstac
    - tifffile
+   - ttach
