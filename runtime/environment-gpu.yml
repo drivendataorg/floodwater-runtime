@@ -48,7 +48,7 @@ dependencies:
  - pytorch::pytorch
  - pytorch::torchvision
  - pytorch-lightning
- - nvidia::cudatoolkit=11.1
+ - nvidia::cudatoolkit=11.0
  - segmentation-models-pytorch
  - timm
  - albumentations
