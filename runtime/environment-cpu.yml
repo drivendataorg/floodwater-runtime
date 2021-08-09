@@ -1,6 +1,7 @@
 name: condaenv
 channels:
  - conda-forge
+ - pytorch
  - fastai
 dependencies:
 ###############################
@@ -44,8 +45,9 @@ dependencies:
 # deep learning         #
 #########################
  - fastai
- - pytorch-cpu
- - torchvision-cpu
+ - pytorch
+ - torchvision
+ - cpuonly
  - pytorch-lightning
  - segmentation-models-pytorch
  - albumentations

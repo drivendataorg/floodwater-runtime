@@ -1,6 +1,7 @@
 name: condaenv
 channels:
  - conda-forge
+ - pytorch
  - fastai
 dependencies:
 ###############################
