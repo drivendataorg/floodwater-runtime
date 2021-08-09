@@ -8,7 +8,6 @@ dependencies:
 # planetary computer packages #
 ###############################
  - python=3.8*
- - pangeo-notebook=2021.06.05
  - pip=20
  - bottleneck
  - eofs
