@@ -68,6 +68,5 @@ dependencies:
  - pip:
    - pystac==1.0.0rc3
    - pystac-client>=0.2.0b2
-   - planetary-computer==0.3.0rc3
    - stackstac
    - tifffile
