@@ -13,7 +13,6 @@ packages = [
     "torch",  # pytorch
     "sklearn",  # scikit-learn
     "scipy",
-    "xgboost",
     "tensorflow"
 ]
 
