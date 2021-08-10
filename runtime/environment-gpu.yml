@@ -38,5 +38,6 @@ dependencies:
   - torchvision=0.9.1=py39cuda111hcd06603_1_cuda
   - tqdm=4.62.0=pyhd8ed1ab_0
   - typer=0.3.2=pyhd8ed1ab_0
+  - xarray=0.19.0
   - pip:
     - ttach==0.0.3

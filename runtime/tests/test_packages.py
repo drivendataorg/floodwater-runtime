@@ -9,12 +9,12 @@ packages = [
     "xarray",
     "fastai",
     "pandas",
-    "dotenv",
     "numpy",
     "torch",  # pytorch
     "sklearn",  # scikit-learn
     "scipy",
     "xgboost",
+    "tensorflow"
 ]
 
 
