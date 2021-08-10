@@ -64,8 +64,7 @@ RUN mamba env create --name ${CONDA_ENV} -f /home/${NB_USER}/environment.yml  \
     && rm /home/${NB_USER}/environment.yml \
     && find ${CONDA_DIR} -follow -type f -name '*.a' -delete \
     && find ${CONDA_DIR} -follow -type f -name '*.pyc' -delete \
-    && find ${CONDA_DIR} -follow -type f -name '*.js.map' -delete \
-    && find ${NB_PYTHON_PREFIX}/lib/python*/site-packages/bokeh/server/static -follow -type f -name '*.js' ! -name '*.min.js' -delete
+    && find ${CONDA_DIR} -follow -type f -name '*.js.map' -delete
 
 # Copy run script into working dir and set it as the working doie
 WORKDIR /codeexecution
