@@ -22,7 +22,7 @@ dependencies:
   - pygeos=0.10.1
   - pytest=6.2.4
   - python=3.9.6
-  - pytorch-cpu=1.9.0
+  - pytorch=1.9.0
   - cpuonly # This package forces installation of pytorch without GPU support
   - libprotobuf<3.17.0a0
   - pytorch-lightning=1.4.1
