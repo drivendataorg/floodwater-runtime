@@ -12,6 +12,7 @@ dependencies:
   - geotiff=1.6.0
   - h5py=2.10.0
   - imageio=2.9.0
+  - keras=2.4.3
   - loguru=0.5.3
   - mkl=2020.4
   - numpy=1.21.1
