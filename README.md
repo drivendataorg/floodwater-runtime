@@ -30,10 +30,6 @@ This repository has three primary uses for competitors:
  - [Making a submission](#making-a-submission)
  - [Reviewing the logs](#reviewing-the-logs)
 ### [Updating the runtime packages](#2-updating-the-runtime-packages)
- - [Adding new Python packages](#adding-new-python-package)
- - [Adding new R packages](#adding-new-r-packages)
- - [Testing new dependencies](#testing-new-dependencies)
- - [Opening a pull request](#opening-a-pull-request)
 ### [Useful scripts for local testing](#3-useful-scripts-for-local-testing)
 
 ----
