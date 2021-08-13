@@ -1,11 +1,8 @@
 name: condaenv
 channels:
-  - fastai
-  - pytorch
   - conda-forge
 dependencies:
   - albumentations=1.0.3
-  - fastai=2.5.0
   - geos=3.9.1
   - geotiff=1.6.0
   - h5py=2.10.0
@@ -22,23 +19,23 @@ dependencies:
   - pygeos=0.10.1
   - pytest=6.2.4
   - python=3.9.6
-  - pytorch=1.9.0
-  - cpuonly # This package forces installation of pytorch without GPU support
-  - libprotobuf<3.17.0a0
-  - pytorch-lightning=1.4.1
   - rasterio=1.2.6
   - scikit-image=0.18.2
   - scikit-learn=0.24.2
   - scipy=1.7.1
-  - segmentation-models-pytorch=0.2.0
   - shapely=1.7.1
   - tensorflow=2.4.1
   - tifffile=2021.8.8
   - tiledb=2.3.2
-  - timm=0.4.12
-  - torchvision=0.10.0
   - tqdm=4.62.0
   - typer=0.3.2
   - xarray=0.19.0
   - pip:
+    - -f https://download.pytorch.org/whl/torch_stable.html
+    - fastai==2.5.0
     - ttach==0.0.3
+    - segmentation-models-pytorch==0.2.0
+    - pytorch-lightning==1.4.1
+    - timm==0.4.12
+    - torch==1.9.0+cpu
+    - torchvision==0.10.0+cpu
