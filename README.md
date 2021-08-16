@@ -197,6 +197,32 @@ make test-submission
 
 This will start the container, mount the local data and submission folders as folders within the container, and follow the same steps that will run on the platform to unpack your submission and run your code.
 
+### Scoring your submission.tar.gz
+
+We have included a [metric script](https://github.com/drivendataorg/floodwater-runtime/blob/main/runtime/scripts/metric.py) that shows how the metric can be calculated locally on your training data the same way we score your actual submitted files. You can run this, too:
+
+```bash
+# unzip your submission so the .tifs are actually around then come back up to the project root
+cd submission && tar xvf submission.tar.gz && cd ..
+
+# show usage instructions
+python runtime/scripts/metric.py --help
+#    Usage: metric.py [OPTIONS] SUBMISSION_DIR ACTUAL_DIR
+#    
+#      Given a directory with the predicted mask files (all values in {0, 1}) and
+#      the actual mask files (all values in {0, 1, 255}), get the overall
+#      intersection-over-union score
+#    
+#    Arguments:
+#      SUBMISSION_DIR  [required]
+#      ACTUAL_DIR      [required]
+
+python runtime/scripts/metric.py ./submission/ ../floodwater-runtime-data/test_labels/
+#    2021-08-16 12:51:41.938 | INFO     | __main__:main:47 - calculating score for 542 image pairs ...
+#    100%|█████████████████████████████████████████| 542/542 [00:01<00:00, 320.16it/s]
+#    2021-08-16 12:51:43.059 | SUCCESS  | __main__:main:49 - overall score: 0.00015550276166856222
+```
+
 ### Reviewing the logs
 
 When you run `make test-submission` the logs will be printed to the terminal. They will also be written to the `submission` folder as `log.txt`. You can always review that file and copy any versions of it that you want from the `submission` folder. The errors there will help you to determine what changes you need to make sure your code executes successfully.
