@@ -1,13 +1,8 @@
 name: condaenv
 channels:
-  - fastai
-  - nvidia
   - conda-forge
 dependencies:
   - albumentations=1.0.3
-  - cudatoolkit=11.1.74=h6bb024c_0
-  - cudnn=8.2.1.32=h86fa8c9_0
-  - fastai=2.5.0
   - geos=3.9.1
   - geotiff=1.6.0
   - h5py=2.10.0
@@ -25,21 +20,23 @@ dependencies:
   - pygeos=0.10.1
   - pytest=6.2.4
   - python=3.9.6
-  - pytorch=1.8.0=cuda111py39h37e5b68_1
-  - pytorch-lightning=1.4.1
   - rasterio=1.2.6
   - scikit-image=0.18.2
   - scikit-learn=0.24.2
   - scipy=1.7.1
-  - segmentation-models-pytorch=0.2.0
   - shapely=1.7.1
-  - tensorflow=2.4.1=py39hf3d152e_0
+  - tensorflow=2.4.1
   - tifffile=2021.8.8
   - tiledb=2.3.2
-  - timm=0.4.12
-  - torchvision=0.9.1=py39cuda111hcd06603_1_cuda
   - tqdm=4.62.0
   - typer=0.3.2
   - xarray=0.19.0
   - pip:
+    - -f https://download.pytorch.org/whl/torch_stable.html
+    - fastai==2.5.0
     - ttach==0.0.3
+    - segmentation-models-pytorch==0.2.0
+    - pytorch-lightning==1.4.1
+    - timm==0.4.12
+    - torch==1.9.0+cu111
+    - torchvision==0.10.0+cu111
