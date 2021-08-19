@@ -13,9 +13,9 @@ The [Planetary Computer Hub](https://planetarycomputer.microsoft.com/docs/overvi
 
 This repository has three primary uses for competitors:
 
-- **Example for developing your solutions**: You can find here a [baseline solution](https://github.com/drivendataorg/floodwater-runtime/tree/master/benchmark) `main.py` which does not do very much but will run in the runtime environment and outputs a proper submission. You can use this as a guide to bring in your model and generate a submission. 
+- **Example for developing your solutions**: You can find here a [baseline solution](https://github.com/drivendataorg/floodwater-runtime/tree/master/benchmark) `main.py` which does not do very much but will run in the runtime environment and outputs a proper submission. You can use this as a guide to bring in your model and generate a submission. You can also find an example implementation of the [PyTorch benchmark](https://github.com/drivendataorg/floodwater-runtime/tree/main/benchmark-pytorch) based on the [benchmark blog post](https://www.drivendata.co/blog/detect-floodwater-benchmark).
 
-- **Testing your code submission**: It lets you test your `submission.zip` file with a locally running version of the container so you don't have to wait for it to process on the competition site to find programming errors.
+- **Testing your code submission**: It lets you test your `submission.zip` file with a locally running version of the container so you don't have to wait for it to process on the competition site to find programming errors. You can also find an [evaluation script](https://github.com/drivendataorg/floodwater-runtime/blob/main/runtime/scripts/metric.py) for implementing the competition metric.
 
 - **Requesting new packages in the official runtime**: It lets you test adding additional packages to the official runtime [CPU](https://github.com/drivendataorg/floodwater-runtime/blob/main/runtime/environment-cpu.yml) and [GPU](https://github.com/drivendataorg/floodwater-runtime/blob/main/runtime/environment-gpu.yml) environments. The official runtime uses **Python 3.9.6** environments managed by [Anaconda](https://docs.conda.io/en/latest/). You can then submit a PR to request compatible packages be included in the official container image.
 
