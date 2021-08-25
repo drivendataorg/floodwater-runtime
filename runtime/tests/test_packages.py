@@ -1,6 +1,10 @@
 # adapted from pangeo https://github.com/pangeo-data/pangeo-docker-images/blob/master/tests/test_pangeo-notebook.py
-import pytest
 import importlib
+import subprocess
+import warnings
+
+import pytest
+
 
 packages = [
     # these are problem libraries that don't always seem to import, mostly due
@@ -20,3 +24,17 @@ packages = [
 @pytest.mark.parametrize("package_name", packages, ids=packages)
 def test_import(package_name):
     importlib.import_module(package_name)
+
+def test_gpu_packages():
+    try:
+        subprocess.check_call(["nvidia-smi"])
+
+        import torch
+        assert torch.cuda.is_available()
+
+        import tensorflow as tf
+        assert tf.test.is_built_with_cuda()
+        assert tf.config.list_physical_devices('GPU')
+
+    except FileNotFoundError:
+        warnings.warn("Skipping GPU import tests since nvidia-smi is not present on test machine.")
