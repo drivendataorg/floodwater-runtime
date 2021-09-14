@@ -3,6 +3,7 @@ channels:
   - fastai
   - conda-forge
 dependencies:
+  - absl-py=0.13.0
   - albumentations=1.0.3
   - fastai=2.5.0
   - geos=3.9.1

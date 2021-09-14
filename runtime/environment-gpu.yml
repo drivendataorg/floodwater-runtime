@@ -4,6 +4,7 @@ channels:
   - nvidia
   - conda-forge
 dependencies:
+  - absl-py=0.13.0
   - albumentations=1.0.3
   - cudatoolkit=11.1.74=h6bb024c_0
   - cudnn=8.2.1.32=h86fa8c9_0
