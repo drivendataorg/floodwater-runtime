@@ -27,6 +27,7 @@ def intersection_over_union(array_pairs, total=None):
     intersection = 0
     union = 0
     for pred, actual in tqdm(array_pairs, total=total):
+        actual = np.expand_dims(actual, axis=-1)
         invalid_mask = actual == NA_VALUE
         actual = np.ma.masked_array(actual, invalid_mask)
         pred = np.ma.masked_array(pred, invalid_mask)
