@@ -47,3 +47,4 @@ dependencies:
     - mmsegmentation==0.16.0
     - tensorflow-gpu==2.6.0
     - segmentation-models==1.0.1
+    - numba==0.54.0
