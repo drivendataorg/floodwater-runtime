@@ -3,6 +3,7 @@ channels:
   - fastai
   - nvidia
   - conda-forge
+  - conda-forge/label/broken  # required imagecodecs is marked broken
 dependencies:
   - albumentations=1.0.3
   - cudatoolkit=11.1.74=h6bb024c_0
